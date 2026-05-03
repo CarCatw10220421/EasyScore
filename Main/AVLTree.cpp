@@ -48,12 +48,20 @@ void AVLTree::displayRankings(AVLNode* node, int& rank) const {
 
 int AVLTree::getHeight(AVLNode* node) const {
     // Return 0 for nullptr, otherwise return node height
-    return node == nullptr ? 0 : node->height;
+    if (node == nullptr) {
+        return 0;
+    } else {
+        return node->height;
+    }
 }
 
 int AVLTree::getBalance(AVLNode* node) const {
     // Balance factor is left height minus right height.
-    return node == nullptr ? 0 : getHeight(node->left) - getHeight(node->right);
+    if (node == nullptr) {
+        return 0;
+    } else {
+        return getHeight(node->left) - getHeight(node->right);
+    }
 }
 
 AVLNode* AVLTree::rotateLeft(AVLNode* node) {
