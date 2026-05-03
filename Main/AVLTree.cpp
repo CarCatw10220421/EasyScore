@@ -58,10 +58,19 @@ int AVLTree::getBalance(AVLNode* node) const {
 
 AVLNode* AVLTree::rotateLeft(AVLNode* node) {
     // Implement left rotation.
-    return node;
+    AVLNode *newRoot nweRoot = node->left;
+    AVLNode *newRoot movedSubtree = newRoot->left:
+
+    newRoot->left= node;
+    node->right = movedSubrees;
+
+    node->height =1 + std::max(getHeight(node->left), getHeight(node->right));
+    newRoot->height= 1+ std::max(getHeight(newRoot->left),getHeight(newRoot->right));
+    
+    return newRoot;
 }
 
 AVLNode* AVLTree::rotateRight(AVLNode* node) {
     // Implement right rotation.
-    return node;
+    return newRoot;
 }
