@@ -62,7 +62,7 @@ AVLNode* AVLTree::rotateLeft(AVLNode* node) {
     AVLNode *newRoot movedSubtree = newRoot->left:
 
     newRoot->left= node;
-    node->right = movedSubrees;
+    node->right = movedSubtree;
 
     node->height =1 + std::max(getHeight(node->left), getHeight(node->right));
     newRoot->height= 1+ std::max(getHeight(newRoot->left),getHeight(newRoot->right));
@@ -72,5 +72,13 @@ AVLNode* AVLTree::rotateLeft(AVLNode* node) {
 
 AVLNode* AVLTree::rotateRight(AVLNode* node) {
     // Implement right rotation.
+    AVLNode *newRoot nweRoot = node->right;
+    AVLNode *newRoot movedSubtree = newRoot->right:
+
+    newRoot->right= node;
+    node->left = movedSubtree;
+
+    node->height =1 + std::max(getHeight(node->left), getHeight(node->right));
+    newRoot->height= 1+ std::max(getHeight(newRoot->left),getHeight(newRoot->right));
     return newRoot;
 }
