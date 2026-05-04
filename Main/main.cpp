@@ -18,7 +18,7 @@ int main() {
     std::cout << "Choose an option: ";
     std::cin >> choice;
 
-    if (choice != 1||2||3||4||5) {
+    if (choice != 1 && choice != 2 && choice != 3 && choice != 4 && choice != 5){
         std::cin.clear();
         std::cout << "Please enter a number from 1 to 5.\n";
         return 0;
